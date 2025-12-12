@@ -153,7 +153,7 @@ For full ethical guidelines, see [docs/ethical-framework.md](docs/ethical-framew
 pip install multilingual-deception-bench
 
 # Or install from source
-git clone https://github.com/yourusername/multilingual-deception-bench.git
+git clone https://github.com/coutoluizf/multilingual-deception-bench.git
 cd multilingual-deception-bench
 pip install -e ".[dev]"
 ```
@@ -305,7 +305,7 @@ We welcome contributions from researchers, engineers, and anyone passionate abou
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/multilingual-deception-bench.git
+git clone https://github.com/coutoluizf/multilingual-deception-bench.git
 cd multilingual-deception-bench
 
 # Create virtual environment
@@ -394,7 +394,7 @@ If you use Multilingual Deception Bench in your research, please cite:
 @software{multilingual_deception_bench,
   title = {Multilingual Deception Bench: A Benchmark for AI-Enabled Social Engineering Risk},
   year = {2025},
-  url = {https://github.com/yourusername/multilingual-deception-bench},
+  url = {https://github.com/coutoluizf/multilingual-deception-bench},
   license = {Apache-2.0}
 }
 ```
@@ -423,6 +423,6 @@ This project builds on the work of many in the AI safety community, including:
 
 **Making AI safer for everyone, in every language.**
 
-[Report Bug](https://github.com/yourusername/multilingual-deception-bench/issues) · [Request Feature](https://github.com/yourusername/multilingual-deception-bench/issues) · [Discussions](https://github.com/yourusername/multilingual-deception-bench/discussions)
+[Report Bug](https://github.com/coutoluizf/multilingual-deception-bench/issues) · [Request Feature](https://github.com/coutoluizf/multilingual-deception-bench/issues) · [Discussions](https://github.com/coutoluizf/multilingual-deception-bench/discussions)
 
 </div>

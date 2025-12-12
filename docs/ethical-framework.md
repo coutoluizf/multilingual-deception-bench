@@ -282,7 +282,7 @@ If you use this benchmark, please cite:
 @software{multilingual_deception_bench,
   title = {Multilingual Deception Bench: A Benchmark for AI-Enabled Social Engineering Risk},
   year = {2025},
-  url = {https://github.com/yourusername/multilingual-deception-bench},
+  url = {https://github.com/coutoluizf/multilingual-deception-bench},
   license = {Apache-2.0}
 }
 ```

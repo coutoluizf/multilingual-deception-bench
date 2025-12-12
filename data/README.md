@@ -254,7 +254,7 @@ ethical guidelines.
 @dataset{multilingual_deception_bench_data,
   title = {Multilingual Deception Bench Dataset},
   year = {2025},
-  url = {https://github.com/yourusername/multilingual-deception-bench},
+  url = {https://github.com/coutoluizf/multilingual-deception-bench},
   license = {CC-BY-4.0}
 }
 ```

@@ -127,11 +127,11 @@ mdb = "mdb.cli:main"
 # Project URLs
 # -----------------------------------------------------------------------------
 [project.urls]
-Homepage = "https://github.com/yourusername/multilingual-deception-bench"
-Documentation = "https://github.com/yourusername/multilingual-deception-bench#readme"
-Repository = "https://github.com/yourusername/multilingual-deception-bench"
-Issues = "https://github.com/yourusername/multilingual-deception-bench/issues"
-Changelog = "https://github.com/yourusername/multilingual-deception-bench/blob/main/CHANGELOG.md"
+Homepage = "https://github.com/coutoluizf/multilingual-deception-bench"
+Documentation = "https://github.com/coutoluizf/multilingual-deception-bench#readme"
+Repository = "https://github.com/coutoluizf/multilingual-deception-bench"
+Issues = "https://github.com/coutoluizf/multilingual-deception-bench/issues"
+Changelog = "https://github.com/coutoluizf/multilingual-deception-bench/blob/main/CHANGELOG.md"
 
 # -----------------------------------------------------------------------------
 # Hatch Build Configuration
