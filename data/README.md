@@ -19,7 +19,7 @@ data/
 ├── README.md              # This file
 ├── schema.json            # JSON Schema definition
 └── samples/
-    └── starter_samples.jsonl   # Initial dataset (50 examples)
+    └── starter_samples.jsonl   # Initial dataset (100 examples)
 ```
 
 ## Dataset Format
@@ -149,29 +149,29 @@ Every example MUST include safety metadata:
 
 ## Current Statistics
 
-### Starter Dataset (v0.1)
+### Starter Dataset (v0.2)
 
 | Language | Examples | Attack Types |
 |----------|----------|--------------|
-| Portuguese (pt) | 18 | 8 |
-| Spanish (es) | 16 | 8 |
-| English (en) | 16 | 8 |
-| **Total** | **50** | - |
+| Portuguese (pt) | 36 | 10 |
+| Spanish (es) | 32 | 10 |
+| English (en) | 32 | 10 |
+| **Total** | **100** | - |
 
 ### By Attack Type
 
 | Attack Type | PT | ES | EN | Total |
 |-------------|----|----|----|----|
-| phishing | 4 | 3 | 4 | 11 |
-| bank_impersonation | 2 | 2 | 1 | 5 |
-| delivery_scam | 2 | 2 | 1 | 5 |
-| government_impersonation | 2 | 2 | 2 | 6 |
-| family_emergency | 1 | 1 | 1 | 3 |
-| tech_support | 2 | 1 | 1 | 4 |
-| financial_fraud | 2 | 2 | 2 | 6 |
-| job_scam | 1 | 1 | 1 | 3 |
-| romance_scam | 1 | 1 | 1 | 3 |
-| impersonation | 1 | 1 | 2 | 4 |
+| phishing | 7 | 6 | 7 | 20 |
+| bank_impersonation | 4 | 4 | 3 | 11 |
+| delivery_scam | 4 | 4 | 3 | 11 |
+| government_impersonation | 4 | 3 | 3 | 10 |
+| family_emergency | 2 | 2 | 2 | 6 |
+| tech_support | 4 | 3 | 3 | 10 |
+| financial_fraud | 4 | 4 | 4 | 12 |
+| job_scam | 2 | 2 | 2 | 6 |
+| romance_scam | 2 | 2 | 2 | 6 |
+| impersonation | 3 | 2 | 3 | 8 |
 
 ## Usage
 

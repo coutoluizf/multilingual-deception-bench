@@ -357,10 +357,11 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 - [x] Core dataset schema with safety metadata
 - [x] Content redaction utilities
 - [x] Basic synthetic generator
+- [x] Starter dataset (100 fully redacted examples)
 - [ ] Evaluation harness with 12 metrics
 - [ ] Model adapters (OpenAI, Anthropic, Google, Local)
 - [ ] CLI tool
-- [ ] Initial dataset (1,000+ examples)
+- [ ] Expanded dataset (1,000+ examples)
 - [ ] Public leaderboard
 
 ### Phase 2 (Future)
