@@ -1,0 +1,247 @@
+# =============================================================================
+# Multilingual Deception Bench - Project Configuration
+# =============================================================================
+# This file defines the Python package configuration, dependencies, and
+# development tools for the MDB benchmark suite.
+# =============================================================================
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "multilingual-deception-bench"
+version = "0.1.0"
+description = "A multilingual benchmark and red-teaming suite for measuring AI-enabled social-engineering risk"
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.11"
+authors = [
+    { name = "Multilingual Deception Bench Contributors" }
+]
+keywords = [
+    "ai-safety",
+    "benchmark",
+    "llm",
+    "social-engineering",
+    "multilingual",
+    "red-teaming",
+    "evaluation",
+    "guardrails",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Security",
+    "Typing :: Typed",
+]
+
+# -----------------------------------------------------------------------------
+# Core Dependencies
+# -----------------------------------------------------------------------------
+dependencies = [
+    # Data validation and serialization
+    "pydantic>=2.0.0",
+
+    # CLI interface
+    "click>=8.0.0",
+    "rich>=13.0.0",  # Beautiful terminal output
+
+    # Async HTTP for API calls
+    "aiohttp>=3.9.0",
+    "httpx>=0.25.0",  # Modern HTTP client
+
+    # Data processing
+    "orjson>=3.9.0",  # Fast JSON parsing
+
+    # Progress tracking
+    "tqdm>=4.66.0",
+
+    # Language detection for validation
+    "langdetect>=1.0.9",
+]
+
+# -----------------------------------------------------------------------------
+# Optional Dependencies
+# -----------------------------------------------------------------------------
+[project.optional-dependencies]
+# For running evaluations with API-based models
+api = [
+    "openai>=1.0.0",
+    "anthropic>=0.18.0",
+    "google-generativeai>=0.3.0",
+]
+
+# For running evaluations with local models
+local = [
+    "ollama>=0.1.0",
+    "transformers>=4.36.0",
+    "torch>=2.0.0",
+]
+
+# For the web leaderboard data processing
+web = [
+    "pandas>=2.0.0",
+    "numpy>=1.24.0",
+]
+
+# Development dependencies
+dev = [
+    # Testing
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.21.0",
+    "pytest-cov>=4.1.0",
+
+    # Linting and formatting
+    "ruff>=0.1.0",
+    "black>=23.0.0",
+    "mypy>=1.7.0",
+
+    # Pre-commit hooks
+    "pre-commit>=3.5.0",
+
+    # Type stubs
+    "types-tqdm>=4.66.0",
+]
+
+# All optional dependencies
+all = [
+    "multilingual-deception-bench[api,local,web,dev]",
+]
+
+# -----------------------------------------------------------------------------
+# CLI Entry Points
+# -----------------------------------------------------------------------------
+[project.scripts]
+mdb = "mdb.cli:main"
+
+# -----------------------------------------------------------------------------
+# Project URLs
+# -----------------------------------------------------------------------------
+[project.urls]
+Homepage = "https://github.com/yourusername/multilingual-deception-bench"
+Documentation = "https://github.com/yourusername/multilingual-deception-bench#readme"
+Repository = "https://github.com/yourusername/multilingual-deception-bench"
+Issues = "https://github.com/yourusername/multilingual-deception-bench/issues"
+Changelog = "https://github.com/yourusername/multilingual-deception-bench/blob/main/CHANGELOG.md"
+
+# -----------------------------------------------------------------------------
+# Hatch Build Configuration
+# -----------------------------------------------------------------------------
+[tool.hatch.build.targets.sdist]
+include = [
+    "/src",
+    "/data/schema.json",
+    "/data/samples",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mdb"]
+
+# -----------------------------------------------------------------------------
+# Ruff Configuration (Linting)
+# -----------------------------------------------------------------------------
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = [
+    "E",      # pycodestyle errors
+    "W",      # pycodestyle warnings
+    "F",      # pyflakes
+    "I",      # isort
+    "B",      # flake8-bugbear
+    "C4",     # flake8-comprehensions
+    "UP",     # pyupgrade
+    "ARG",    # flake8-unused-arguments
+    "SIM",    # flake8-simplify
+    "TCH",    # flake8-type-checking
+    "PTH",    # flake8-use-pathlib
+    "ERA",    # eradicate (commented out code)
+    "PL",     # pylint
+    "RUF",    # ruff-specific
+]
+ignore = [
+    "PLR0913",  # Too many arguments (we have complex schemas)
+    "PLR2004",  # Magic values (acceptable in metrics)
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["mdb"]
+
+# -----------------------------------------------------------------------------
+# Black Configuration (Formatting)
+# -----------------------------------------------------------------------------
+[tool.black]
+target-version = ["py311"]
+line-length = 100
+
+# -----------------------------------------------------------------------------
+# MyPy Configuration (Type Checking)
+# -----------------------------------------------------------------------------
+[tool.mypy]
+python_version = "3.11"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+follow_imports = "silent"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+disallow_untyped_defs = false
+
+# -----------------------------------------------------------------------------
+# Pytest Configuration
+# -----------------------------------------------------------------------------
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+addopts = [
+    "-v",
+    "--tb=short",
+    "--strict-markers",
+]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "integration: marks tests as integration tests",
+]
+
+# -----------------------------------------------------------------------------
+# Coverage Configuration
+# -----------------------------------------------------------------------------
+[tool.coverage.run]
+source = ["src/mdb"]
+branch = true
+omit = [
+    "*/__init__.py",
+    "*/cli.py",  # CLI is tested separately
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if TYPE_CHECKING:",
+    "if __name__ == .__main__.:",
+]
