@@ -446,8 +446,12 @@ class AttackExample(BaseModel):
         1. ID format matches language and attack_type
         2. Safety metadata redaction_level is appropriate
         """
+        # Get string values for language and attack_type
+        lang_str = self.language.value if hasattr(self.language, 'value') else str(self.language)
+        attack_str = self.attack_type.value if hasattr(self.attack_type, 'value') else str(self.attack_type)
+
         # Check ID consistency with language and attack_type
-        expected_suffix = f"-{self.language.value}-{self.attack_type.value}"
+        expected_suffix = f"-{lang_str}-{attack_str}"
         if not self.id.endswith(expected_suffix):
             # This is a warning, not an error - IDs can be flexible
             # but should ideally match for organization

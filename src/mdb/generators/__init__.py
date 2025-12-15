@@ -40,9 +40,11 @@ Example:
 
 from mdb.generators.redaction import ContentRedactor, redact_content
 from mdb.generators.synthetic_generator import SyntheticGenerator
+from mdb.generators.seed_based_generator import SeedBasedGenerator
 
 __all__ = [
     "ContentRedactor",
     "redact_content",
     "SyntheticGenerator",
+    "SeedBasedGenerator",
 ]

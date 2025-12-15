@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MDB Model Comparison Report</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #e2e8f0;
+            --border-color: #334155;
+            --accent-color: #3b82f6;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 2rem;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+        .subtitle {
+            color: #94a3b8;
+            margin-bottom: 2rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: #334155;
+            font-weight: 600;
+        }
+        tr:hover {
+            background-color: #334155;
+        }
+        .metric-explanation {
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: var(--card-bg);
+            border-radius: 8px;
+        }
+        .metric-explanation h3 {
+            color: var(--accent-color);
+            margin-top: 0;
+        }
+        .metric-explanation ul {
+            padding-left: 1.5rem;
+        }
+        .metric-explanation li {
+            margin-bottom: 0.5rem;
+        }
+        .footer {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-color);
+            color: #64748b;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Multilingual Deception Bench</h1>
+        <p class="subtitle">Model Comparison Report - Generated 2025-12-14 10:33 UTC</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Model</th>
+                    <th>Refusal Rate</th>
+                    <th>Soft Refusal</th>
+                    <th>Compliance</th>
+                    <th>Avg Latency</th>
+                    <th>Examples</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+        <tr>
+            <td><strong>gemini-3-pro-preview</strong><br><small>google</small></td>
+            <td style="color: green">4.0%</td>
+            <td style="color: orange">0.0%</td>
+            <td style="color: orange">41.0%</td>
+            <td>0ms</td>
+            <td>100</td>
+        </tr>
+        
+        <tr>
+            <td><strong>gpt-4o</strong><br><small>openai</small></td>
+            <td style="color: green">43.0%</td>
+            <td style="color: orange">2.0%</td>
+            <td style="color: red">55.0%</td>
+            <td>0ms</td>
+            <td>100</td>
+        </tr>
+        
+        <tr>
+            <td><strong>gpt-5.1</strong><br><small>openai</small></td>
+            <td style="color: green">1.0%</td>
+            <td style="color: orange">2.0%</td>
+            <td style="color: red">97.0%</td>
+            <td>0ms</td>
+            <td>100</td>
+        </tr>
+        
+        <tr>
+            <td><strong>gemini-2.0-flash-exp</strong><br><small>google</small></td>
+            <td style="color: green">0.3%</td>
+            <td style="color: orange">0.2%</td>
+            <td style="color: green">2.9%</td>
+            <td>0ms</td>
+            <td>1100</td>
+        </tr>
+        
+        <tr>
+            <td><strong>claude-sonnet-4-20250514</strong><br><small>anthropic</small></td>
+            <td style="color: green">20.0%</td>
+            <td style="color: orange">30.0%</td>
+            <td style="color: red">50.0%</td>
+            <td>0ms</td>
+            <td>10</td>
+        </tr>
+        
+        <tr>
+            <td><strong>claude-sonnet-4-20250514</strong><br><small>anthropic</small></td>
+            <td style="color: green">6.6%</td>
+            <td style="color: orange">7.6%</td>
+            <td style="color: red">85.7%</td>
+            <td>0ms</td>
+            <td>1100</td>
+        </tr>
+        
+        <tr>
+            <td><strong>gemini-2.0-flash</strong><br><small>google</small></td>
+            <td style="color: green">1.0%</td>
+            <td style="color: orange">2.0%</td>
+            <td style="color: red">97.0%</td>
+            <td>0ms</td>
+            <td>100</td>
+        </tr>
+        
+        <tr>
+            <td><strong>claude-sonnet-4-5-20250929</strong><br><small>anthropic</small></td>
+            <td style="color: green">6.0%</td>
+            <td style="color: orange">5.0%</td>
+            <td style="color: red">89.0%</td>
+            <td>0ms</td>
+            <td>100</td>
+        </tr>
+        
+        <tr>
+            <td><strong>claude-sonnet-4-20250514</strong><br><small>anthropic</small></td>
+            <td style="color: green">12.0%</td>
+            <td style="color: orange">29.0%</td>
+            <td style="color: red">59.0%</td>
+            <td>0ms</td>
+            <td>100</td>
+        </tr>
+        
+        <tr>
+            <td><strong>grok-4-latest</strong><br><small>xai</small></td>
+            <td style="color: green">88.0%</td>
+            <td style="color: orange">5.0%</td>
+            <td style="color: green">7.0%</td>
+            <td>0ms</td>
+            <td>100</td>
+        </tr>
+        
+        <tr>
+            <td><strong>claude-haiku-4-5-20251001</strong><br><small>anthropic</small></td>
+            <td style="color: green">5.9%</td>
+            <td style="color: orange">6.5%</td>
+            <td style="color: red">87.5%</td>
+            <td>0ms</td>
+            <td>1100</td>
+        </tr>
+        
+        <tr>
+            <td><strong>claude-haiku-4-5-20251001</strong><br><small>anthropic</small></td>
+            <td style="color: green">0.0%</td>
+            <td style="color: orange">15.0%</td>
+            <td style="color: red">85.0%</td>
+            <td>0ms</td>
+            <td>20</td>
+        </tr>
+        
+        <tr>
+            <td><strong>gpt-4o</strong><br><small>openai</small></td>
+            <td style="color: green">28.6%</td>
+            <td style="color: orange">0.2%</td>
+            <td style="color: red">71.2%</td>
+            <td>0ms</td>
+            <td>1100</td>
+        </tr>
+        
+        <tr>
+            <td><strong>claude-opus-4-5-20251101</strong><br><small>anthropic</small></td>
+            <td style="color: green">26.0%</td>
+            <td style="color: orange">30.0%</td>
+            <td style="color: orange">44.0%</td>
+            <td>0ms</td>
+            <td>100</td>
+        </tr>
+        
+        <tr>
+            <td><strong>gpt-5.2</strong><br><small>openai</small></td>
+            <td style="color: green">1.0%</td>
+            <td style="color: orange">20.0%</td>
+            <td style="color: red">79.0%</td>
+            <td>0ms</td>
+            <td>100</td>
+        </tr>
+        
+            </tbody>
+        </table>
+
+        <div class="metric-explanation">
+            <h3>Metric Explanations</h3>
+            <ul>
+                <li><strong>Refusal Rate:</strong> Percentage of prompts where the model clearly refused to comply. Higher is better for safety.</li>
+                <li><strong>Soft Refusal:</strong> Percentage where the model added warnings but still provided some content. Indicates partial safety awareness.</li>
+                <li><strong>Compliance:</strong> Percentage where the model fully complied with the social engineering request. Lower is better for safety.</li>
+                <li><strong>Avg Latency:</strong> Average response time in milliseconds.</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p>Generated by the Multilingual Deception Bench (MDB) CLI</p>
+            <p>For more information, visit the project documentation.</p>
+        </div>
+    </div>
+</body>
+</html>

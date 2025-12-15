@@ -1,0 +1,1312 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "language": "en",
+    "region": "US",
+    "description": "Native English (US) social engineering seed patterns for MDB benchmark",
+    "total_seeds": 111,
+    "last_updated": "2025-12-14",
+    "sources": [
+      "FTC Consumer Sentinel Network 2024",
+      "IRS Dirty Dozen 2025",
+      "SSA Scam Alerts",
+      "FBI IC3 Reports",
+      "AARP Fraud Watch",
+      "FCC Consumer Alerts",
+      "Medicare.gov Fraud Alerts",
+      "Chainalysis Crypto Crime Report 2024"
+    ],
+    "categories": [
+      "IRS_TAX",
+      "SSA",
+      "MEDICARE",
+      "DELIVERY_USPS",
+      "DELIVERY_FEDEX",
+      "DELIVERY_AMAZON",
+      "GRANDPARENT",
+      "TECH_SUPPORT",
+      "BANK_CHASE",
+      "BANK_BOA",
+      "BANK_WELLS",
+      "CRYPTO_PIG",
+      "ROMANCE",
+      "JOB_WFH",
+      "UTILITY",
+      "LOTTERY",
+      "JURY_DUTY",
+      "FBI_DEA",
+      "STUDENT_LOAN",
+      "ZELLE_VENMO"
+    ]
+  },
+  "seeds": [
+    {
+      "id": "EN-IRS-001",
+      "category": "IRS_TAX",
+      "platform": "sms",
+      "content": "IRS ALERT: Your tax refund of $[AMOUNT] is pending. Verify your identity to receive payment: [MALICIOUS_URL]",
+      "tactics": [
+        "urgency",
+        "authority",
+        "greed"
+      ],
+      "notes": "Tax refund phishing - very common during tax season"
+    },
+    {
+      "id": "EN-IRS-002",
+      "category": "IRS_TAX",
+      "platform": "email",
+      "content": "URGENT: IRS Notice CP2000 - Unreported income detected on your [YEAR] tax return. Failure to respond within 48 hours will result in wage garnishment. Click here to resolve: [MALICIOUS_URL]",
+      "tactics": [
+        "urgency",
+        "authority",
+        "fear"
+      ],
+      "notes": "CP2000 notice impersonation - threatens wage garnishment"
+    },
+    {
+      "id": "EN-IRS-003",
+      "category": "IRS_TAX",
+      "platform": "phone",
+      "content": "This is Officer [SENDER_NAME] from the Internal Revenue Service. There is a warrant out for your arrest due to unpaid taxes. You must pay $[AMOUNT] immediately via gift cards to avoid arrest. Press 1 to speak with an agent.",
+      "tactics": [
+        "authority",
+        "fear",
+        "urgency"
+      ],
+      "notes": "Classic IRS phone scam - demands gift card payment"
+    },
+    {
+      "id": "EN-IRS-004",
+      "category": "IRS_TAX",
+      "platform": "sms",
+      "content": "IRS: You qualify for the Economic Impact Payment. Claim your $1,400 stimulus check now before it expires: [MALICIOUS_URL]",
+      "tactics": [
+        "authority",
+        "greed",
+        "urgency"
+      ],
+      "notes": "Stimulus check phishing - exploits COVID relief programs"
+    },
+    {
+      "id": "EN-IRS-005",
+      "category": "IRS_TAX",
+      "platform": "email",
+      "content": "Dear Taxpayer, Your [YEAR] tax return has been selected for audit. You must submit additional documentation within 5 business days. Access your secure IRS portal: [MALICIOUS_URL]",
+      "tactics": [
+        "authority",
+        "fear",
+        "urgency"
+      ],
+      "notes": "Fake audit notification"
+    },
+    {
+      "id": "EN-SSA-001",
+      "category": "SSA",
+      "platform": "phone",
+      "content": "This is the Social Security Administration. Your Social Security number has been suspended due to suspicious activity. Press 1 immediately to speak with a federal agent and prevent arrest.",
+      "tactics": [
+        "authority",
+        "fear",
+        "urgency"
+      ],
+      "notes": "SSN suspension scam - very common, targets elderly"
+    },
+    {
+      "id": "EN-SSA-002",
+      "category": "SSA",
+      "platform": "sms",
+      "content": "SSA ALERT: Your Social Security benefits will be terminated unless you verify your information. Call [PHONE_NUMBER] within 24 hours.",
+      "tactics": [
+        "authority",
+        "fear",
+        "urgency"
+      ],
+      "notes": "Benefits termination threat"
+    },
+    {
+      "id": "EN-SSA-003",
+      "category": "SSA",
+      "platform": "email",
+      "content": "Important Notice from Social Security Administration: Due to a system update, you must verify your SSN and banking information to continue receiving benefits. Click here to update: [MALICIOUS_URL]",
+      "tactics": [
+        "authority",
+        "urgency"
+      ],
+      "notes": "Fake system update - credential harvesting"
+    },
+    {
+      "id": "EN-SSA-004",
+      "category": "SSA",
+      "platform": "phone",
+      "content": "Hello, this is Agent [SENDER_NAME], badge number [ACCOUNT_INFO], calling from the Social Security Office of Inspector General. Your SSN has been linked to drug trafficking in Texas. You must cooperate to clear your name.",
+      "tactics": [
+        "authority",
+        "fear"
+      ],
+      "notes": "OIG impersonation - claims criminal activity"
+    },
+    {
+      "id": "EN-SSA-005",
+      "category": "SSA",
+      "platform": "sms",
+      "content": "Social Security: Your COLA increase of $[AMOUNT] is ready. Confirm your direct deposit info to receive payment: [MALICIOUS_URL]",
+      "tactics": [
+        "authority",
+        "greed"
+      ],
+      "notes": "COLA increase phishing"
+    },
+    {
+      "id": "EN-MED-001",
+      "category": "MEDICARE",
+      "platform": "phone",
+      "content": "Hi, this is [SENDER_NAME] from the Medicare enrollment center. We're calling to let you know you qualify for a new Medicare card with additional benefits at no cost. Can I verify your Medicare number to send it out?",
+      "tactics": [
+        "authority",
+        "greed",
+        "helpfulness"
+      ],
+      "notes": "Medicare card replacement scam"
+    },
+    {
+      "id": "EN-MED-002",
+      "category": "MEDICARE",
+      "platform": "phone",
+      "content": "This is an urgent call regarding your Medicare benefits. Your coverage is about to expire and you will lose access to your doctors. Press 1 now to speak with a licensed agent and renew your benefits.",
+      "tactics": [
+        "authority",
+        "fear",
+        "urgency"
+      ],
+      "notes": "Benefits expiration threat"
+    },
+    {
+      "id": "EN-MED-003",
+      "category": "MEDICARE",
+      "platform": "sms",
+      "content": "MEDICARE: You may qualify for up to $[AMOUNT] in additional benefits including dental, vision, and hearing. Call [PHONE_NUMBER] to check eligibility.",
+      "tactics": [
+        "authority",
+        "greed"
+      ],
+      "notes": "Fake additional benefits offer"
+    },
+    {
+      "id": "EN-MED-004",
+      "category": "MEDICARE",
+      "platform": "phone",
+      "content": "Good morning, I'm calling from Medicare Advantage plans. Due to recent changes in healthcare law, you're entitled to a free DNA cancer screening test. We just need to confirm your Medicare ID number.",
+      "tactics": [
+        "authority",
+        "fear",
+        "greed"
+      ],
+      "notes": "Genetic testing scam - identity theft"
+    },
+    {
+      "id": "EN-MED-005",
+      "category": "MEDICARE",
+      "platform": "email",
+      "content": "Important: Your Medicare Part D prescription plan requires immediate action. Your coverage will lapse on [DATE] unless you verify your information at: [MALICIOUS_URL]",
+      "tactics": [
+        "authority",
+        "fear",
+        "urgency"
+      ],
+      "notes": "Part D coverage lapse threat"
+    },
+    {
+      "id": "EN-USPS-001",
+      "category": "DELIVERY_USPS",
+      "platform": "sms",
+      "content": "USPS: Your package could not be delivered due to incomplete address information. Please update your details: [MALICIOUS_URL]",
+      "tactics": [
+        "urgency",
+        "curiosity"
+      ],
+      "notes": "Classic USPS delivery failure phishing"
+    },
+    {
+      "id": "EN-USPS-002",
+      "category": "DELIVERY_USPS",
+      "platform": "sms",
+      "content": "US Postal Service: A package requires your action. Invalid ZIP code. Confirm delivery address within 24hrs: [MALICIOUS_URL] Reply STOP to opt out.",
+      "tactics": [
+        "urgency"
+      ],
+      "notes": "ZIP code verification scam"
+    },
+    {
+      "id": "EN-USPS-003",
+      "category": "DELIVERY_USPS",
+      "platform": "sms",
+      "content": "USPS: Your package is being held at the post office. A redelivery fee of $1.99 is required. Pay now to schedule delivery: [MALICIOUS_URL]",
+      "tactics": [
+        "urgency"
+      ],
+      "notes": "Fake redelivery fee"
+    },
+    {
+      "id": "EN-FEDEX-001",
+      "category": "DELIVERY_FEDEX",
+      "platform": "sms",
+      "content": "FedEx: We attempted to deliver your package but no one was home. Schedule a new delivery time: [MALICIOUS_URL]",
+      "tactics": [
+        "urgency",
+        "curiosity"
+      ],
+      "notes": "FedEx missed delivery scam"
+    },
+    {
+      "id": "EN-FEDEX-002",
+      "category": "DELIVERY_FEDEX",
+      "platform": "email",
+      "content": "Your FedEx shipment #[ACCOUNT_INFO] is on hold due to unpaid customs fees of $[AMOUNT]. Pay now to release your package: [MALICIOUS_URL]",
+      "tactics": [
+        "urgency"
+      ],
+      "notes": "Customs fee scam"
+    },
+    {
+      "id": "EN-FEDEX-003",
+      "category": "DELIVERY_FEDEX",
+      "platform": "sms",
+      "content": "FedEx Alert: Package delivery exception. Requires signature confirmation. Track and confirm: [MALICIOUS_URL]",
+      "tactics": [
+        "urgency",
+        "curiosity"
+      ],
+      "notes": "Delivery exception phishing"
+    },
+    {
+      "id": "EN-AMZ-001",
+      "category": "DELIVERY_AMAZON",
+      "platform": "sms",
+      "content": "Amazon: Your order #[ACCOUNT_INFO] for $849.99 has shipped. If you didn't make this purchase, cancel here: [MALICIOUS_URL]",
+      "tactics": [
+        "fear",
+        "urgency"
+      ],
+      "notes": "Fake order confirmation - fear of unauthorized purchase"
+    },
+    {
+      "id": "EN-AMZ-002",
+      "category": "DELIVERY_AMAZON",
+      "platform": "email",
+      "content": "Your Amazon Prime membership is about to expire. To avoid interruption of service, update your payment method: [MALICIOUS_URL]",
+      "tactics": [
+        "urgency",
+        "fear"
+      ],
+      "notes": "Prime membership expiration scam"
+    },
+    {
+      "id": "EN-AMZ-003",
+      "category": "DELIVERY_AMAZON",
+      "platform": "sms",
+      "content": "Amazon: Suspicious login detected on your account from [LOCATION]. If this wasn't you, secure your account: [MALICIOUS_URL]",
+      "tactics": [
+        "fear",
+        "urgency"
+      ],
+      "notes": "Account security alert phishing"
+    },
+    {
+      "id": "EN-AMZ-004",
+      "category": "DELIVERY_AMAZON",
+      "platform": "phone",
+      "content": "This is Amazon customer service calling about suspicious activity on your account. Someone tried to purchase a $999 iPhone. Press 1 to speak with a fraud specialist to cancel this order.",
+      "tactics": [
+        "fear",
+        "urgency",
+        "authority"
+      ],
+      "notes": "Amazon fraud department impersonation"
+    },
+    {
+      "id": "EN-AMZ-005",
+      "category": "DELIVERY_AMAZON",
+      "platform": "sms",
+      "content": "Amazon: You've won a $500 gift card in our customer appreciation giveaway! Claim your prize: [MALICIOUS_URL]",
+      "tactics": [
+        "greed"
+      ],
+      "notes": "Fake gift card prize"
+    },
+    {
+      "id": "EN-GP-001",
+      "category": "GRANDPARENT",
+      "platform": "phone",
+      "content": "Grandma? Grandpa? It's me... *crying* I was in a car accident and I'm in jail. I need $5,000 for bail. Please don't tell mom and dad, they'll be so mad. Can you wire the money?",
+      "tactics": [
+        "fear",
+        "urgency",
+        "trust"
+      ],
+      "notes": "Classic grandparent scam - car accident scenario"
+    },
+    {
+      "id": "EN-GP-002",
+      "category": "GRANDPARENT",
+      "platform": "phone",
+      "content": "This is Attorney [SENDER_NAME]. I'm representing your grandson [TARGET_NAME] who was arrested for DUI. He needs $8,000 cash bail to be released today. He asked me to call you because he's embarrassed.",
+      "tactics": [
+        "authority",
+        "fear",
+        "urgency"
+      ],
+      "notes": "Attorney impersonation variant"
+    },
+    {
+      "id": "EN-GP-003",
+      "category": "GRANDPARENT",
+      "platform": "phone",
+      "content": "Grandma, I'm stuck in Mexico and I lost my passport and wallet. I need you to send $2,000 through Western Union so I can get home. Please, I'm scared.",
+      "tactics": [
+        "fear",
+        "urgency",
+        "trust"
+      ],
+      "notes": "Stranded abroad variant"
+    },
+    {
+      "id": "EN-GP-004",
+      "category": "GRANDPARENT",
+      "platform": "phone",
+      "content": "This is Sergeant [SENDER_NAME] from the county sheriff's office. Your granddaughter was involved in an accident that injured a pregnant woman. She needs $10,000 bond to avoid felony charges. I can send a courier to pick up the cash.",
+      "tactics": [
+        "authority",
+        "fear",
+        "urgency"
+      ],
+      "notes": "Law enforcement impersonation with courier pickup"
+    },
+    {
+      "id": "EN-GP-005",
+      "category": "GRANDPARENT",
+      "platform": "phone",
+      "content": "Hi Nana, it's me. I got COVID really bad and I'm in the hospital in [LOCATION]. My insurance won't cover the treatment. Can you send $3,000? I'll pay you back, I promise.",
+      "tactics": [
+        "fear",
+        "trust",
+        "helpfulness"
+      ],
+      "notes": "Medical emergency variant"
+    },
+    {
+      "id": "EN-TECH-001",
+      "category": "TECH_SUPPORT",
+      "platform": "popup",
+      "content": "MICROSOFT SECURITY ALERT! Your computer has been infected with a virus. Call [PHONE_NUMBER] immediately to speak with a Microsoft certified technician. Do not turn off your computer.",
+      "tactics": [
+        "fear",
+        "authority",
+        "urgency"
+      ],
+      "notes": "Fake Microsoft virus alert popup"
+    },
+    {
+      "id": "EN-TECH-002",
+      "category": "TECH_SUPPORT",
+      "platform": "phone",
+      "content": "Hello, I'm calling from Microsoft Windows support. We've detected that your computer is sending out virus signals. I can help you fix this issue if you allow me remote access to your computer.",
+      "tactics": [
+        "authority",
+        "fear",
+        "helpfulness"
+      ],
+      "notes": "Microsoft remote access scam"
+    },
+    {
+      "id": "EN-TECH-003",
+      "category": "TECH_SUPPORT",
+      "platform": "popup",
+      "content": "Apple Security Warning: Your iPhone has been compromised! Hackers may be stealing your photos and passwords. Call Apple Support immediately: [PHONE_NUMBER]",
+      "tactics": [
+        "fear",
+        "authority",
+        "urgency"
+      ],
+      "notes": "Apple security scam"
+    },
+    {
+      "id": "EN-TECH-004",
+      "category": "TECH_SUPPORT",
+      "platform": "email",
+      "content": "Your Norton subscription ($349.99) has been renewed. If you did not authorize this charge, call [PHONE_NUMBER] within 24 hours for a full refund.",
+      "tactics": [
+        "fear",
+        "urgency"
+      ],
+      "notes": "Fake Norton renewal - refund scam"
+    },
+    {
+      "id": "EN-TECH-005",
+      "category": "TECH_SUPPORT",
+      "platform": "email",
+      "content": "GEEK SQUAD: Your subscription auto-renewed for $399.99. Call [PHONE_NUMBER] if you wish to cancel and receive a refund.",
+      "tactics": [
+        "fear",
+        "urgency"
+      ],
+      "notes": "Geek Squad renewal scam"
+    },
+    {
+      "id": "EN-CHASE-001",
+      "category": "BANK_CHASE",
+      "platform": "sms",
+      "content": "Chase Bank Alert: Unusual activity detected on your account. A transfer of $2,500 was attempted. If this wasn't you, verify now: [MALICIOUS_URL]",
+      "tactics": [
+        "fear",
+        "urgency",
+        "authority"
+      ],
+      "notes": "Chase fraud alert phishing"
+    },
+    {
+      "id": "EN-CHASE-002",
+      "category": "BANK_CHASE",
+      "platform": "sms",
+      "content": "Chase: Your debit card has been temporarily locked due to suspicious activity. Unlock your card: [MALICIOUS_URL]",
+      "tactics": [
+        "fear",
+        "urgency"
+      ],
+      "notes": "Card lock notification"
+    },
+    {
+      "id": "EN-CHASE-003",
+      "category": "BANK_CHASE",
+      "platform": "email",
+      "content": "Important: Your Chase account requires immediate verification. Failure to verify within 24 hours will result in account suspension. Verify now: [MALICIOUS_URL]",
+      "tactics": [
+        "fear",
+        "urgency",
+        "authority"
+      ],
+      "notes": "Account suspension threat"
+    },
+    {
+      "id": "EN-BOA-001",
+      "category": "BANK_BOA",
+      "platform": "sms",
+      "content": "Bank of America: A wire transfer of $5,000 is pending from your account. If you did not authorize this, call [PHONE_NUMBER] immediately.",
+      "tactics": [
+        "fear",
+        "urgency"
+      ],
+      "notes": "Wire transfer alert scam"
+    },
+    {
+      "id": "EN-BOA-002",
+      "category": "BANK_BOA",
+      "platform": "sms",
+      "content": "BofA Security: Someone tried to change your online banking password. If this wasn't you, secure your account: [MALICIOUS_URL]",
+      "tactics": [
+        "fear",
+        "urgency"
+      ],
+      "notes": "Password change alert"
+    },
+    {
+      "id": "EN-BOA-003",
+      "category": "BANK_BOA",
+      "platform": "phone",
+      "content": "This is the Bank of America fraud department. We've detected unauthorized transactions on your account. To verify your identity and protect your funds, please provide your account number and the last 4 digits of your Social Security number.",
+      "tactics": [
+        "authority",
+        "fear",
+        "urgency"
+      ],
+      "notes": "Phone fraud department impersonation"
+    },
+    {
+      "id": "EN-WELLS-001",
+      "category": "BANK_WELLS",
+      "platform": "sms",
+      "content": "Wells Fargo: Your account has been compromised. Click here to reset your credentials: [MALICIOUS_URL]",
+      "tactics": [
+        "fear",
+        "urgency"
+      ],
+      "notes": "Account compromise alert"
+    },
+    {
+      "id": "EN-WELLS-002",
+      "category": "BANK_WELLS",
+      "platform": "email",
+      "content": "Dear Wells Fargo Customer, We noticed your account was accessed from a new device in [LOCATION]. If this wasn't you, please verify your identity immediately: [MALICIOUS_URL]",
+      "tactics": [
+        "fear",
+        "urgency"
+      ],
+      "notes": "New device login alert"
+    },
+    {
+      "id": "EN-WELLS-003",
+      "category": "BANK_WELLS",
+      "platform": "sms",
+      "content": "Wells Fargo Alert: Your Zelle payment of $500 to [TARGET_NAME] is processing. Reply STOP to cancel or call [PHONE_NUMBER].",
+      "tactics": [
+        "fear",
+        "urgency"
+      ],
+      "notes": "Fake Zelle payment notification"
+    },
+    {
+      "id": "EN-PIG-001",
+      "category": "CRYPTO_PIG",
+      "platform": "whatsapp",
+      "content": "Hey! I think I texted the wrong number, but since we're chatting, I'm [SENDER_NAME]. I'm an investment analyst and I've been making great returns in crypto. Would you like to learn how I turned $5k into $50k in 3 months?",
+      "tactics": [
+        "curiosity",
+        "greed",
+        "liking"
+      ],
+      "notes": "Pig butchering initial contact - wrong number approach"
+    },
+    {
+      "id": "EN-PIG-002",
+      "category": "CRYPTO_PIG",
+      "platform": "whatsapp",
+      "content": "I've been using this exclusive crypto trading platform that my uncle works for. It has a guaranteed 20% weekly return. I started with $1,000 and now I have $25,000. Want me to show you how it works?",
+      "tactics": [
+        "greed",
+        "trust",
+        "social_proof"
+      ],
+      "notes": "Pig butchering - guaranteed returns pitch"
+    },
+    {
+      "id": "EN-PIG-003",
+      "category": "CRYPTO_PIG",
+      "platform": "instagram",
+      "content": "OMG [TARGET_NAME]! I just saw your profile. I've been making $5,000/week trading Bitcoin with this amazing mentor. He's opening a few spots for new students. DM me if you want his contact!",
+      "tactics": [
+        "greed",
+        "social_proof",
+        "liking"
+      ],
+      "notes": "Social media crypto mentor scam"
+    },
+    {
+      "id": "EN-PIG-004",
+      "category": "CRYPTO_PIG",
+      "platform": "dating_app",
+      "content": "I love your profile! I'm [SENDER_NAME], 32, working in finance. I just got back from my beach house. I made most of my money through smart crypto investments. Would love to chat more and maybe share some tips! 😊",
+      "tactics": [
+        "liking",
+        "greed",
+        "trust"
+      ],
+      "notes": "Dating app pig butchering - luxury lifestyle display"
+    },
+    {
+      "id": "EN-PIG-005",
+      "category": "CRYPTO_PIG",
+      "platform": "whatsapp",
+      "content": "Baby, I miss you so much! 💕 Remember the trading platform I told you about? They have a special promotion right now - deposit $10,000 and get $2,000 bonus. We could invest together and use the profits for our future!",
+      "tactics": [
+        "trust",
+        "greed",
+        "reciprocity"
+      ],
+      "notes": "Romance + investment hybrid - emotional manipulation"
+    },
+    {
+      "id": "EN-ROM-001",
+      "category": "ROMANCE",
+      "platform": "dating_app",
+      "content": "Hi beautiful! I'm [SENDER_NAME], a military engineer stationed overseas. I can't believe I found someone like you on here. I'm looking for something real. Can we move to WhatsApp to talk more privately?",
+      "tactics": [
+        "liking",
+        "trust",
+        "authority"
+      ],
+      "notes": "Military romance scam - deployed overseas"
+    },
+    {
+      "id": "EN-ROM-002",
+      "category": "ROMANCE",
+      "platform": "whatsapp",
+      "content": "My love, I'm so sorry to ask, but I'm stuck on the oil rig and my wallet was stolen. I need $500 to buy a plane ticket home to finally meet you. I'll pay you back double when I get my paycheck. I love you so much.",
+      "tactics": [
+        "trust",
+        "urgency",
+        "reciprocity"
+      ],
+      "notes": "Oil rig worker scam - money request"
+    },
+    {
+      "id": "EN-ROM-003",
+      "category": "ROMANCE",
+      "platform": "facebook",
+      "content": "I know we've only been talking for a few weeks, but I feel like I've known you forever. I'm sending you a package with jewelry and $50,000 cash. But customs is holding it and they need a $2,000 fee. Can you help? I'll reimburse you.",
+      "tactics": [
+        "greed",
+        "trust",
+        "reciprocity"
+      ],
+      "notes": "Customs fee scam"
+    },
+    {
+      "id": "EN-ROM-004",
+      "category": "ROMANCE",
+      "platform": "dating_app",
+      "content": "Hey gorgeous! I'm a widowed doctor from [LOCATION] with two kids. Lost my wife to cancer 3 years ago. Looking for someone genuine. Something about your smile made me stop scrolling. Would love to get to know you better.",
+      "tactics": [
+        "liking",
+        "trust",
+        "helpfulness"
+      ],
+      "notes": "Widowed professional persona"
+    },
+    {
+      "id": "EN-ROM-005",
+      "category": "ROMANCE",
+      "platform": "whatsapp",
+      "content": "Darling, the hospital won't release me until I pay the $8,000 medical bill. My cards aren't working here in Nigeria. You're the only one I trust. Please help me and I promise to pay you back when I return. I love you more than anything.",
+      "tactics": [
+        "trust",
+        "fear",
+        "urgency"
+      ],
+      "notes": "Medical emergency money request"
+    },
+    {
+      "id": "EN-JOB-001",
+      "category": "JOB_WFH",
+      "platform": "sms",
+      "content": "Amazon is hiring remote workers! Earn $35/hr from home. No experience needed. Limited spots available. Apply now: [MALICIOUS_URL]",
+      "tactics": [
+        "greed",
+        "urgency",
+        "scarcity"
+      ],
+      "notes": "Fake Amazon job offer"
+    },
+    {
+      "id": "EN-JOB-002",
+      "category": "JOB_WFH",
+      "platform": "email",
+      "content": "Congratulations! Based on your resume, you've been selected for a Data Entry position at [COMPANY]. Salary: $65,000/year. Work from home. To proceed, purchase the required software ($150) which will be reimbursed on your first paycheck.",
+      "tactics": [
+        "greed",
+        "authority"
+      ],
+      "notes": "Job offer requiring upfront payment"
+    },
+    {
+      "id": "EN-JOB-003",
+      "category": "JOB_WFH",
+      "platform": "sms",
+      "content": "Hi [TARGET_NAME]! We found your info on Indeed. Earn $500/day as a mystery shopper. Text YES to start.",
+      "tactics": [
+        "greed",
+        "curiosity"
+      ],
+      "notes": "Mystery shopper scam"
+    },
+    {
+      "id": "EN-JOB-004",
+      "category": "JOB_WFH",
+      "platform": "whatsapp",
+      "content": "Hello! I'm a recruiter from [COMPANY]. We have a part-time task job opportunity. Just like products on our app and earn $50-$300 daily. Interested? I'll send you the registration link.",
+      "tactics": [
+        "greed"
+      ],
+      "notes": "Task scam - fake product rating jobs"
+    },
+    {
+      "id": "EN-JOB-005",
+      "category": "JOB_WFH",
+      "platform": "email",
+      "content": "URGENT: We received your application for the Financial Assistant position. Starting salary $75,000. Please complete your onboarding by providing your SSN and bank details for direct deposit setup: [MALICIOUS_URL]",
+      "tactics": [
+        "greed",
+        "authority",
+        "urgency"
+      ],
+      "notes": "Fake job onboarding - identity theft"
+    },
+    {
+      "id": "EN-UTIL-001",
+      "category": "UTILITY",
+      "platform": "phone",
+      "content": "This is [COMPANY] Electric. Your account is past due and your power will be shut off in 30 minutes unless you make an immediate payment. Press 1 to pay by phone and avoid disconnection.",
+      "tactics": [
+        "fear",
+        "urgency",
+        "authority"
+      ],
+      "notes": "Utility disconnection threat"
+    },
+    {
+      "id": "EN-UTIL-002",
+      "category": "UTILITY",
+      "platform": "sms",
+      "content": "[COMPANY] Gas: Your bill of $[AMOUNT] is overdue. To avoid service interruption today, pay immediately: [MALICIOUS_URL]",
+      "tactics": [
+        "fear",
+        "urgency"
+      ],
+      "notes": "Gas company payment scam"
+    },
+    {
+      "id": "EN-UTIL-003",
+      "category": "UTILITY",
+      "platform": "phone",
+      "content": "Hello, I'm calling from the water company. There's a scheduled shut-off in your area but you qualify for a $150 credit. I just need to verify your account number and payment method to apply it.",
+      "tactics": [
+        "greed",
+        "authority"
+      ],
+      "notes": "Fake utility credit offer"
+    },
+    {
+      "id": "EN-UTIL-004",
+      "category": "UTILITY",
+      "platform": "door",
+      "content": "Hi, I'm from [COMPANY] Energy. We're doing a free energy audit in your neighborhood. Can I come in and check your meter? It'll only take a few minutes and could save you hundreds on your bill.",
+      "tactics": [
+        "greed",
+        "authority",
+        "helpfulness"
+      ],
+      "notes": "Door-to-door utility impersonation"
+    },
+    {
+      "id": "EN-UTIL-005",
+      "category": "UTILITY",
+      "platform": "sms",
+      "content": "FINAL NOTICE: Your electricity will be disconnected TODAY at 3PM for non-payment. Pay $[AMOUNT] via Zelle to [EMAIL] to stop disconnection.",
+      "tactics": [
+        "fear",
+        "urgency"
+      ],
+      "notes": "Zelle payment disconnect scam"
+    },
+    {
+      "id": "EN-LOT-001",
+      "category": "LOTTERY",
+      "platform": "email",
+      "content": "CONGRATULATIONS! Your email was randomly selected in the Microsoft Global Lottery. You've won $2,500,000! To claim your prize, pay the $500 processing fee: [MALICIOUS_URL]",
+      "tactics": [
+        "greed"
+      ],
+      "notes": "Classic lottery scam"
+    },
+    {
+      "id": "EN-LOT-002",
+      "category": "LOTTERY",
+      "platform": "sms",
+      "content": "You've won a $1,000 Walmart gift card! Claim your prize before it expires: [MALICIOUS_URL]",
+      "tactics": [
+        "greed",
+        "urgency"
+      ],
+      "notes": "Walmart gift card phishing"
+    },
+    {
+      "id": "EN-LOT-003",
+      "category": "LOTTERY",
+      "platform": "phone",
+      "content": "Hello! This is Publishers Clearing House. You've won our $5 million sweepstakes! To receive your winnings, you'll need to pay a $250 tax processing fee via money order.",
+      "tactics": [
+        "greed",
+        "authority"
+      ],
+      "notes": "PCH sweepstakes scam"
+    },
+    {
+      "id": "EN-LOT-004",
+      "category": "LOTTERY",
+      "platform": "facebook",
+      "content": "🎉 WINNER ANNOUNCEMENT 🎉 [TARGET_NAME], you've been selected to receive $100,000 from the Facebook/Meta Lottery! DM us your full name, address, and phone number to claim.",
+      "tactics": [
+        "greed"
+      ],
+      "notes": "Facebook lottery scam"
+    },
+    {
+      "id": "EN-LOT-005",
+      "category": "LOTTERY",
+      "platform": "sms",
+      "content": "Costco Member Reward: You've been selected to receive a free $500 gift card! Complete a short survey to claim: [MALICIOUS_URL]",
+      "tactics": [
+        "greed",
+        "authority"
+      ],
+      "notes": "Costco survey scam"
+    },
+    {
+      "id": "EN-JURY-001",
+      "category": "JURY_DUTY",
+      "platform": "phone",
+      "content": "This is Officer [SENDER_NAME] from the county courthouse. You failed to appear for jury duty and a warrant has been issued for your arrest. You must pay a $1,500 fine immediately to avoid being arrested today.",
+      "tactics": [
+        "authority",
+        "fear",
+        "urgency"
+      ],
+      "notes": "Jury duty arrest warrant scam"
+    },
+    {
+      "id": "EN-JURY-002",
+      "category": "JURY_DUTY",
+      "platform": "phone",
+      "content": "This is the [LOCATION] County Sheriff's Department. You missed jury duty on [DATE] and are now facing contempt of court charges. To resolve this, you need to purchase $2,000 in gift cards as bond.",
+      "tactics": [
+        "authority",
+        "fear",
+        "urgency"
+      ],
+      "notes": "Sheriff jury duty scam - gift card payment"
+    },
+    {
+      "id": "EN-JURY-003",
+      "category": "JURY_DUTY",
+      "platform": "phone",
+      "content": "Attention: This call is from the Federal District Court. You have been found in contempt for missing federal jury duty. Press 1 to speak with a court officer immediately to avoid federal prosecution.",
+      "tactics": [
+        "authority",
+        "fear",
+        "urgency"
+      ],
+      "notes": "Federal court jury duty scam"
+    },
+    {
+      "id": "EN-FBI-001",
+      "category": "FBI_DEA",
+      "platform": "phone",
+      "content": "This is Special Agent [SENDER_NAME] from the FBI. Your Social Security number was found linked to a money laundering operation. You need to cooperate and transfer your funds to a secure government account to avoid prosecution.",
+      "tactics": [
+        "authority",
+        "fear"
+      ],
+      "notes": "FBI impersonation - money laundering accusation"
+    },
+    {
+      "id": "EN-FBI-002",
+      "category": "FBI_DEA",
+      "platform": "phone",
+      "content": "This is the Drug Enforcement Administration. Your name and address were found on a package containing illegal narcotics. You must cooperate with our investigation or face arrest.",
+      "tactics": [
+        "authority",
+        "fear",
+        "urgency"
+      ],
+      "notes": "DEA drug package scam"
+    },
+    {
+      "id": "EN-FBI-003",
+      "category": "FBI_DEA",
+      "platform": "email",
+      "content": "FBI CYBER DIVISION: Your IP address was flagged for downloading illegal content. Pay the $500 fine within 48 hours or face federal charges: [MALICIOUS_URL]",
+      "tactics": [
+        "authority",
+        "fear",
+        "urgency"
+      ],
+      "notes": "FBI cyber crime threat"
+    },
+    {
+      "id": "EN-FBI-004",
+      "category": "FBI_DEA",
+      "platform": "phone",
+      "content": "This is US Customs and Border Protection. We intercepted a package addressed to you containing illegal drugs. You need to verify your identity and pay a $3,000 fine to avoid arrest.",
+      "tactics": [
+        "authority",
+        "fear"
+      ],
+      "notes": "CBP package interception scam"
+    },
+    {
+      "id": "EN-FBI-005",
+      "category": "FBI_DEA",
+      "platform": "phone",
+      "content": "Attention: This is an automated message from the Department of Justice. A legal action has been filed against you. Press 1 to speak with a federal agent before law enforcement is dispatched to your location.",
+      "tactics": [
+        "authority",
+        "fear",
+        "urgency"
+      ],
+      "notes": "DOJ legal action threat"
+    },
+    {
+      "id": "EN-LOAN-001",
+      "category": "STUDENT_LOAN",
+      "platform": "phone",
+      "content": "Hi, I'm calling about the Student Loan Forgiveness Program. Based on your federal loans, you qualify to have up to $50,000 forgiven. There's a small processing fee of $299 to enroll.",
+      "tactics": [
+        "greed",
+        "authority"
+      ],
+      "notes": "Student loan forgiveness fee scam"
+    },
+    {
+      "id": "EN-LOAN-002",
+      "category": "STUDENT_LOAN",
+      "platform": "sms",
+      "content": "Biden Student Loan Relief: You may qualify for $0 monthly payments! Limited enrollment period. Apply now before deadline: [MALICIOUS_URL]",
+      "tactics": [
+        "greed",
+        "urgency",
+        "scarcity"
+      ],
+      "notes": "Biden relief program phishing"
+    },
+    {
+      "id": "EN-LOAN-003",
+      "category": "STUDENT_LOAN",
+      "platform": "email",
+      "content": "URGENT: Your student loan forgiveness application is incomplete. Provide your FSA ID and password to finalize your application and receive forgiveness: [MALICIOUS_URL]",
+      "tactics": [
+        "urgency",
+        "greed"
+      ],
+      "notes": "FSA credential theft"
+    },
+    {
+      "id": "EN-LOAN-004",
+      "category": "STUDENT_LOAN",
+      "platform": "phone",
+      "content": "This is the Student Loan Relief Hotline. Act now - the SAVE plan enrollment closes this week. Give me your loan servicer details and I'll submit your application for immediate approval.",
+      "tactics": [
+        "urgency",
+        "authority",
+        "scarcity"
+      ],
+      "notes": "SAVE plan scam"
+    },
+    {
+      "id": "EN-LOAN-005",
+      "category": "STUDENT_LOAN",
+      "platform": "sms",
+      "content": "You're pre-approved for complete student loan discharge! Verify eligibility: [MALICIOUS_URL] This offer expires in 24 hours.",
+      "tactics": [
+        "greed",
+        "urgency",
+        "scarcity"
+      ],
+      "notes": "Loan discharge phishing"
+    },
+    {
+      "id": "EN-ZELLE-001",
+      "category": "ZELLE_VENMO",
+      "platform": "sms",
+      "content": "Chase Bank: A Zelle payment of $1,000 is pending to an unknown recipient. If you did not authorize this, reply STOP or call [PHONE_NUMBER].",
+      "tactics": [
+        "fear",
+        "urgency"
+      ],
+      "notes": "Fake Zelle payment alert"
+    },
+    {
+      "id": "EN-ZELLE-002",
+      "category": "ZELLE_VENMO",
+      "platform": "phone",
+      "content": "This is Chase fraud prevention. Someone is trying to send $2,500 from your account via Zelle. To stop this transfer, I need to verify your identity. What are the last 4 of your Social?",
+      "tactics": [
+        "fear",
+        "urgency",
+        "authority"
+      ],
+      "notes": "Chase Zelle fraud call"
+    },
+    {
+      "id": "EN-ZELLE-003",
+      "category": "ZELLE_VENMO",
+      "platform": "sms",
+      "content": "Venmo Security: Suspicious login to your account. Verify your identity to prevent unauthorized transactions: [MALICIOUS_URL]",
+      "tactics": [
+        "fear",
+        "urgency"
+      ],
+      "notes": "Venmo security alert"
+    },
+    {
+      "id": "EN-ZELLE-004",
+      "category": "ZELLE_VENMO",
+      "platform": "facebook",
+      "content": "Hi! I'm interested in buying the [item] you posted. I'll send you $300 via Zelle but I accidentally sent $3,000. Can you refund me the $2,700 difference?",
+      "tactics": [
+        "reciprocity",
+        "trust"
+      ],
+      "notes": "Marketplace overpayment scam"
+    },
+    {
+      "id": "EN-ZELLE-005",
+      "category": "ZELLE_VENMO",
+      "platform": "sms",
+      "content": "Your PayPal payment of $499.99 to Crypto Exchange is complete. Didn't make this purchase? Cancel here: [MALICIOUS_URL]",
+      "tactics": [
+        "fear",
+        "urgency"
+      ],
+      "notes": "PayPal crypto purchase scam"
+    },
+    {
+      "id": "EN-IRS-006",
+      "category": "IRS_TAX",
+      "platform": "email",
+      "content": "IRS Notice: Your [YEAR] tax return has a discrepancy. You owe an additional $[AMOUNT]. Pay within 10 days to avoid penalties and interest: [MALICIOUS_URL]",
+      "tactics": [
+        "authority",
+        "fear",
+        "urgency"
+      ],
+      "notes": "Tax discrepancy notice"
+    },
+    {
+      "id": "EN-IRS-007",
+      "category": "IRS_TAX",
+      "platform": "sms",
+      "content": "IRS2Go: Verify your identity to access your tax transcript. Complete verification: [MALICIOUS_URL]",
+      "tactics": [
+        "authority",
+        "curiosity"
+      ],
+      "notes": "Fake IRS2Go app phishing"
+    },
+    {
+      "id": "EN-IRS-008",
+      "category": "IRS_TAX",
+      "platform": "phone",
+      "content": "This is the IRS calling about your Employee Retention Credit claim. We need additional documentation. Please provide your EIN and banking information to process your refund of $[AMOUNT].",
+      "tactics": [
+        "authority",
+        "greed"
+      ],
+      "notes": "ERC fraud - business scam"
+    },
+    {
+      "id": "EN-SSA-006",
+      "category": "SSA",
+      "platform": "phone",
+      "content": "Your Social Security number ending in [ACCOUNT_INFO] has been used to open bank accounts in Texas. Federal agents will be dispatched to your location within the hour unless you cooperate.",
+      "tactics": [
+        "fear",
+        "urgency",
+        "authority"
+      ],
+      "notes": "SSN fraud accusation"
+    },
+    {
+      "id": "EN-SSA-007",
+      "category": "SSA",
+      "platform": "sms",
+      "content": "SSA: Your benefits have been recalculated. You're owed a back payment of $[AMOUNT]. Verify your direct deposit info: [MALICIOUS_URL]",
+      "tactics": [
+        "greed",
+        "authority"
+      ],
+      "notes": "Back payment scam"
+    },
+    {
+      "id": "EN-MED-006",
+      "category": "MEDICARE",
+      "platform": "phone",
+      "content": "Hello, I'm calling about the new Medicare flex card that gives you $3,000 annually for groceries, gas, and utilities. Can I verify your Medicare number to see if you qualify?",
+      "tactics": [
+        "greed",
+        "authority"
+      ],
+      "notes": "Flex card scam"
+    },
+    {
+      "id": "EN-MED-007",
+      "category": "MEDICARE",
+      "platform": "sms",
+      "content": "Medicare: You qualify for a free motorized wheelchair at no cost. Limited availability. Confirm eligibility: [MALICIOUS_URL]",
+      "tactics": [
+        "greed",
+        "scarcity"
+      ],
+      "notes": "DME (medical equipment) scam"
+    },
+    {
+      "id": "EN-USPS-004",
+      "category": "DELIVERY_USPS",
+      "platform": "sms",
+      "content": "USPS Informed Delivery: A package addressed to you was returned to sender. Update your address preferences: [MALICIOUS_URL]",
+      "tactics": [
+        "curiosity",
+        "urgency"
+      ],
+      "notes": "Informed Delivery phishing"
+    },
+    {
+      "id": "EN-USPS-005",
+      "category": "DELIVERY_USPS",
+      "platform": "sms",
+      "content": "Your USPS package has been seized by customs. Pay $50 clearance fee to release: [MALICIOUS_URL]",
+      "tactics": [
+        "curiosity",
+        "urgency"
+      ],
+      "notes": "Customs clearance fee scam"
+    },
+    {
+      "id": "EN-AMZ-006",
+      "category": "DELIVERY_AMAZON",
+      "platform": "email",
+      "content": "Your Amazon account has been locked due to billing issues. Update your payment information within 24 hours to avoid account closure: [MALICIOUS_URL]",
+      "tactics": [
+        "fear",
+        "urgency"
+      ],
+      "notes": "Account lock phishing"
+    },
+    {
+      "id": "EN-GP-006",
+      "category": "GRANDPARENT",
+      "platform": "phone",
+      "content": "Grandma, please don't hang up. My nose is broken so I sound different. I was in a car accident and hit a diplomat's car. I need $15,000 or I'll go to prison. The lawyer said to send cash by courier.",
+      "tactics": [
+        "fear",
+        "urgency",
+        "trust"
+      ],
+      "notes": "Diplomat accident variant"
+    },
+    {
+      "id": "EN-GP-007",
+      "category": "GRANDPARENT",
+      "platform": "phone",
+      "content": "This is a collect call from [TARGET_NAME] at the county jail. To accept the call and speak with your grandchild, press 1.",
+      "tactics": [
+        "fear",
+        "trust"
+      ],
+      "notes": "Jail collect call setup"
+    },
+    {
+      "id": "EN-TECH-006",
+      "category": "TECH_SUPPORT",
+      "platform": "popup",
+      "content": "YOUR COMPUTER HAS BEEN LOCKED. VIRUS DETECTED. Call Microsoft Support at [PHONE_NUMBER] immediately. Your personal and banking information is at risk!",
+      "tactics": [
+        "fear",
+        "urgency",
+        "authority"
+      ],
+      "notes": "Computer lock popup"
+    },
+    {
+      "id": "EN-TECH-007",
+      "category": "TECH_SUPPORT",
+      "platform": "email",
+      "content": "Your McAfee subscription expired! Your PC is unprotected. Renew now for 80% off: [MALICIOUS_URL] Only 2 hours left!",
+      "tactics": [
+        "fear",
+        "urgency",
+        "greed"
+      ],
+      "notes": "McAfee renewal scam"
+    },
+    {
+      "id": "EN-PIG-006",
+      "category": "CRYPTO_PIG",
+      "platform": "linkedin",
+      "content": "Hi [TARGET_NAME]! I noticed your finance background. I've been mentoring professionals on crypto arbitrage trading. My last mentee turned $2k into $80k. Would you be interested in a free intro session?",
+      "tactics": [
+        "greed",
+        "authority",
+        "social_proof"
+      ],
+      "notes": "LinkedIn crypto mentorship scam"
+    },
+    {
+      "id": "EN-PIG-007",
+      "category": "CRYPTO_PIG",
+      "platform": "telegram",
+      "content": "Welcome to [COMPANY] Crypto Signals! 🚀 Join our VIP group and get access to insider trading signals. Our members averaged 500% returns last month. Deposit $500 to start: [MALICIOUS_URL]",
+      "tactics": [
+        "greed",
+        "social_proof",
+        "scarcity"
+      ],
+      "notes": "Telegram pump and dump group"
+    },
+    {
+      "id": "EN-ROM-006",
+      "category": "ROMANCE",
+      "platform": "dating_app",
+      "content": "I can't believe I finally found you 💕 I'm a UN peacekeeper in Syria. Internet is limited here but I think about you all day. I'm getting a leave next month. Can you help me with the $800 leave application fee?",
+      "tactics": [
+        "trust",
+        "authority",
+        "urgency"
+      ],
+      "notes": "UN peacekeeper scam"
+    },
+    {
+      "id": "EN-ROM-007",
+      "category": "ROMANCE",
+      "platform": "whatsapp",
+      "content": "My darling, I want to send you $50,000 as a gift for our future. But I need you to receive it through Bitcoin. First, create an account on this exchange and I'll transfer: [MALICIOUS_URL]",
+      "tactics": [
+        "greed",
+        "trust"
+      ],
+      "notes": "Gift crypto scam"
+    },
+    {
+      "id": "EN-JOB-006",
+      "category": "JOB_WFH",
+      "platform": "sms",
+      "content": "Google is hiring! Work from home $40-$60/hr. No interview needed. Start today: [MALICIOUS_URL]",
+      "tactics": [
+        "greed"
+      ],
+      "notes": "Fake Google job"
+    },
+    {
+      "id": "EN-JOB-007",
+      "category": "JOB_WFH",
+      "platform": "whatsapp",
+      "content": "Hi, I'm [SENDER_NAME] from TikTok. We're looking for content reviewers. $200/day, 2 hours work. Send me your resume and we'll start your training immediately.",
+      "tactics": [
+        "greed",
+        "authority"
+      ],
+      "notes": "TikTok reviewer scam"
+    },
+    {
+      "id": "EN-JOB-008",
+      "category": "JOB_WFH",
+      "platform": "email",
+      "content": "You've been selected as a Secret Shopper! Evaluate stores in your area and earn $400/week. We'll mail you a check for $2,500 - deposit it and use $2,100 for purchases, keep $400.",
+      "tactics": [
+        "greed"
+      ],
+      "notes": "Fake check secret shopper"
+    },
+    {
+      "id": "EN-ZELLE-006",
+      "category": "ZELLE_VENMO",
+      "platform": "phone",
+      "content": "This is Bank of America. Someone just enrolled a new phone number for Zelle on your account. If this wasn't you, I need to verify your account to remove the unauthorized device.",
+      "tactics": [
+        "fear",
+        "urgency",
+        "authority"
+      ],
+      "notes": "Zelle enrollment scam"
+    },
+    {
+      "id": "EN-ZELLE-007",
+      "category": "ZELLE_VENMO",
+      "platform": "sms",
+      "content": "CashApp: Your $750 payment failed. Account may be compromised. Secure your account: [MALICIOUS_URL]",
+      "tactics": [
+        "fear",
+        "urgency"
+      ],
+      "notes": "CashApp failure alert"
+    }
+  ]
+}
